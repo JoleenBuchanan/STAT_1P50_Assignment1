@@ -1,0 +1,14 @@
+#QUESTION 1
+#Loop Statements with Python
+
+def power(x=0,y=1):
+    result = x**y#defining
+    return (result)
+
+result = power(10,8)
+randomValue = 1
+count = 1
+while randomValue <= result:
+    randomValue = randomValue * (count + 1)
+    count += 1
+    print('Answer =',randomValue)
