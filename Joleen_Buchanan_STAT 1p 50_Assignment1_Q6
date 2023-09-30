@@ -1,0 +1,22 @@
+#QUESTION6
+
+def proportion_dictionary(numbers):
+    if not numbers:
+        return {}
+
+    numbers.sort()  # Sort the list in ascending order.
+    total_elements = len(numbers)
+    proportion_dict = {}
+
+    for num in numbers:
+        # Count how many elements are smaller than or equal to the current number.
+        count = numbers.count(num)
+        proportion = count / total_elements
+        proportion_dict[num] = proportion
+
+    return proportion_dict
+
+# Example usage:
+numbers = [4, 2, 7, 1, 5, 4, 6]
+result = proportion_dictionary(numbers)
+print(result)

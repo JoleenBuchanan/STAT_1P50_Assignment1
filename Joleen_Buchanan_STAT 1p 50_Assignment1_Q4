@@ -1,0 +1,18 @@
+#QUESTION 4
+from random import random
+
+listOfRandomVariables = [random() for i in range(20)]
+randomVariable = random()
+#step1
+
+sortedlistofvariables = sorted(listOfRandomVariables)
+print(sortedlistofvariables)
+
+if randomVariable in sortedlistofvariables:
+    index = sortedlistofvariables.index(randomVariable)
+    if sortedlistofvariables[index] >= randomVariable:
+        print(index)
+    else:
+        print('Value is not in List')
+else:
+    print('Value is not in List')

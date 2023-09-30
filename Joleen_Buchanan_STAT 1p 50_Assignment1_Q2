@@ -1,0 +1,7 @@
+QUESTION 2
+
+listOfNames = ['Mikasa','Hinata', 'Kageyama','Ereh'] # This is the lsit of Strings
+def dictionarywithstringlength( listOfNames): # Defining the funtion
+    return {string: len(string) for string in listOfNames} # we want the fuction to return the string with the length of each string within the list
+answers = dictionarywithstringlength(listOfNames) #Calling the funvtion and storing it ina vriable
+print(answers)
