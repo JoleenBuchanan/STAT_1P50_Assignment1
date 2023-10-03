@@ -1,31 +1,37 @@
 #QUESTION 5
 import math
 
-radiioftwocircles = (12,20)
+radiioftwocircles = (12, 20)
 print('Area of Circle is: A = πr^2')
-for radiis in radiioftwocircles: #inserting the fuction into the for loop
-    def percentageareaofcircle(pi,x,y=2):
-     result = ((pi*x**y)/100)#defining
-     return result
+
+# Initialize variables for result1 and result2
+result1 = None
+result2 = None
+
+for radiis in radiioftwocircles:
+    def percentageareaofcircle(pi, x, y=2):
+        result = ((pi * x**y) / 100)
+        return result
+
     x = radiis
     pi = math.pi
-    i = 0
-    result = percentageareaofcircle(pi,x)
 
+    result = percentageareaofcircle(pi, x)
 
-    if i == 0:
+    if result1 is None:  # If result1 is not defined, set it
         result1 = result
     else:
         result2 = result
 
-    if result1 >= result2:
-        larger_area, smaller_area = result1, result2
-    else:
-        larger_area, smaller_area = result2, result1
+# Determine which result is larger and calculate coverage
+if result1 >= result2:
+    larger_area, smaller_area = result1, result2
+else:
+    larger_area, smaller_area = result2, result1
 
-    coverage = (smaller_area / larger_area)
+coverage = (smaller_area / larger_area)
+
 print('Result 1:', result1)
 print('Result 2:', result2)
-print('Coverage =',coverage,'%')
-print('Percentage Area of larger circle =',result,'%')
+print('Percentage Coverage =', coverage, '%')
 
